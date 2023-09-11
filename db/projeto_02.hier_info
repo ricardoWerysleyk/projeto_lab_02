@@ -1,0 +1,352 @@
+|projeto_02
+SW[0] => BIN_to_BCD:BINBCD.SW[0]
+SW[1] => BIN_to_BCD:BINBCD.SW[1]
+SW[2] => BIN_to_BCD:BINBCD.SW[2]
+SW[3] => BIN_to_BCD:BINBCD.SW[3]
+SW[4] => BIN_to_BCD:BINBCD.SW[4]
+SW[5] => BIN_to_BCD:BINBCD.SW[5]
+SW[6] => BIN_to_BCD:BINBCD.SW[6]
+SW[7] => BIN_to_BCD:BINBCD.SW[7]
+HEX0[0] <= SEG_7:Unidade.s[6]
+HEX0[1] <= SEG_7:Unidade.s[5]
+HEX0[2] <= SEG_7:Unidade.s[4]
+HEX0[3] <= SEG_7:Unidade.s[3]
+HEX0[4] <= SEG_7:Unidade.s[2]
+HEX0[5] <= SEG_7:Unidade.s[1]
+HEX0[6] <= SEG_7:Unidade.s[0]
+HEX1[0] <= SEG_7:Dezena.s[6]
+HEX1[1] <= SEG_7:Dezena.s[5]
+HEX1[2] <= SEG_7:Dezena.s[4]
+HEX1[3] <= SEG_7:Dezena.s[3]
+HEX1[4] <= SEG_7:Dezena.s[2]
+HEX1[5] <= SEG_7:Dezena.s[1]
+HEX1[6] <= SEG_7:Dezena.s[0]
+HEX2[0] <= SEG_7:Centena.s[6]
+HEX2[1] <= SEG_7:Centena.s[5]
+HEX2[2] <= SEG_7:Centena.s[4]
+HEX2[3] <= SEG_7:Centena.s[3]
+HEX2[4] <= SEG_7:Centena.s[2]
+HEX2[5] <= SEG_7:Centena.s[1]
+HEX2[6] <= SEG_7:Centena.s[0]
+
+
+|projeto_02|BIN_to_BCD:BINBCD
+SW[0] => bcd[0].DATAIN
+SW[1] => ADD3:blocoF.A0
+SW[2] => ADD3:blocoD.A0
+SW[3] => ADD3:blocoC.A0
+SW[4] => ADD3:blocoB.A0
+SW[5] => ADD3:blocoA.A0
+SW[6] => ADD3:blocoA.A1
+SW[7] => ADD3:blocoA.A2
+bcd[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= ADD3:blocoF.S0
+bcd[2] <= ADD3:blocoF.S1
+bcd[3] <= ADD3:blocoF.S2
+bcd[4] <= ADD3:blocoF.S3
+bcd[5] <= ADD3:blocoG.S0
+bcd[6] <= ADD3:blocoG.S1
+bcd[7] <= ADD3:blocoG.S2
+bcd[8] <= ADD3:blocoG.S3
+bcd[9] <= ADD3:blocoE.S3
+bcd[10] <= <GND>
+bcd[11] <= <GND>
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoA
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoB
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoC
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoD
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoE
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoF
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|BIN_to_BCD:BINBCD|ADD3:blocoG
+A0 => S0.IN1
+A0 => S1.IN0
+A0 => S2.IN0
+A0 => S3.IN0
+A0 => S0.IN1
+A0 => S0.IN0
+A0 => S2.IN1
+A1 => S0.IN0
+A1 => S1.IN0
+A1 => S1.IN1
+A1 => S2.IN0
+A2 => S0.IN1
+A2 => S2.IN1
+A2 => S3.IN1
+A2 => S0.IN0
+A2 => S1.IN1
+A3 => S0.IN1
+A3 => S2.IN1
+A3 => S3.IN1
+A3 => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|SEG_7:Unidade
+A => s.IN1
+A => s.IN1
+A => s.IN1
+A => s.IN1
+B => s.IN0
+B => s.IN1
+B => s.IN0
+B => s.IN0
+B => s.IN0
+B => s.IN1
+B => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN0
+C => s.IN0
+C => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+s[6] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|SEG_7:Dezena
+A => s.IN1
+A => s.IN1
+A => s.IN1
+A => s.IN1
+B => s.IN0
+B => s.IN1
+B => s.IN0
+B => s.IN0
+B => s.IN0
+B => s.IN1
+B => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN0
+C => s.IN0
+C => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+s[6] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto_02|SEG_7:Centena
+A => s.IN1
+A => s.IN1
+A => s.IN1
+A => s.IN1
+B => s.IN0
+B => s.IN1
+B => s.IN0
+B => s.IN0
+B => s.IN0
+B => s.IN1
+B => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN1
+C => s.IN0
+C => s.IN0
+C => s.IN0
+C => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+D => s.IN1
+s[6] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
